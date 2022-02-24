@@ -1,0 +1,59 @@
+.container,
+.entry-content,
+.block-editor-block-list__layout {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply mb-5 font-display;
+}
+
+h1 {
+	@apply md:text-6xl;
+}
+h2 {
+	@apply md:text-4xl ;
+}
+h3 {
+	@apply md:text-2xl;
+}
+h4 {
+	@apply md:text-xl;
+}
+h5 {
+	@apply text-lg;
+}
+h6 {
+	@apply text-lg;
+}
+
+p {
+	@apply mb-4 leading-tight text-lg;
+}
+
+b,
+strong {
+
+}
+
+a {
+	&:hover {
+		@apply text-primary;
+	}
+}
+
+.entry-content {
+	ul {
+        @apply list-disc pl-4;
+        
+	}
+
+	ol {
+        @apply list-decimal pl-4;
+	}
+}
+

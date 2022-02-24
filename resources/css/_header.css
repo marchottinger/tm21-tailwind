@@ -1,0 +1,93 @@
+svg#logo{
+    path, rect, polygon{
+        fill: var(--wp--preset--color--primary);
+    }
+}
+body.home{
+
+    header{
+        svg#logo{
+            @apply transition-all duration-300;
+            path, rect, polygon{
+                fill: white;
+            }
+        }
+        &.scrolled{
+            @apply bg-white shadow-lg;
+            > .container{
+                @apply text-gray-600;
+            }
+            svg#logo{
+                path, rect, polygon{
+                    fill: var(--wp--preset--color--primary);
+                }
+            }
+        }   
+    }
+
+}
+
+header.topbar{
+    &.scrolled{
+        @apply bg-white shadow-lg
+    }
+}
+
+
+/* MENU */
+ul.menu{
+    @apply flex;
+}
+ul.menu, ul.sub-menu{
+    li.menu-item{
+        @apply py-2 mr-4;
+
+        &:last-of-type{
+            @apply mr-0;
+        }
+        
+    }
+}
+
+/* DROPDOWN MENU */
+ul.menu.dropdown {
+
+    /* Has submenu */
+    li.menu-item.menu-item-has-children{
+        position: relative;
+        display: inline-flex;
+        padding-right: calc(25px + 0.5rem);
+        &::after {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            width: 25px; height: 25px;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Pro"; font-weight: 400; content: "\f078";
+        }
+        &:hover{
+            ul.sub-menu{
+                @apply shadow-xl max-h-96;
+     
+            }
+        }
+    }
+
+
+    ul.sub-menu{
+        @apply bg-white py-0 overflow-hidden absolute border-t-0 top-full max-h-0 border-transparent transition-all duration-300 left-0 ;
+        li.menu-item{
+            @apply  text-black  mr-0 py-0 ;
+            a{
+                @apply block px-6 py-3 whitespace-nowrap hover:text-primary;
+                
+            }
+        }
+    }
+}
+

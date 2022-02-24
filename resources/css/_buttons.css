@@ -1,0 +1,69 @@
+/* DEFAULT BUTTON */
+.wp-block-buttons>.wp-block-button{
+    @apply mb-4;
+}
+
+.gform_wrapper.gravity-theme .gform_footer button, 
+.gform_wrapper.gravity-theme .gform_footer input, 
+.gform_wrapper.gravity-theme .gform_page_footer button, 
+.gform_wrapper.gravity-theme .gform_page_footer input,
+.wp-block-button__link{
+    @apply
+    bg-primary 
+    transition-all 
+    text-white 
+    rounded-sm 
+    py-3 px-6 
+    text-base 
+    font-bold 
+    border-2 border-primary border-solid
+    /* Hover */
+    hover:bg-primary 
+    hover:bg-opacity-70
+    hover:border-opacity-0
+    ;
+}
+
+/* OUTLINE */
+.is-style-outline>.wp-block-button__link, .wp-block-button__link.is-style-outline{
+    @apply
+        py-3 px-6 
+        border-primary
+        text-primary
+        hover:bg-primary 
+        hover:text-white
+    ;
+    &:not(.has-text-color){
+        @apply 
+        text-primary
+        hover:text-white
+        ;
+    }
+
+    &.has-primary-color{
+        @apply border-primary hover:bg-primary;
+    }
+    &.has-secondary-color{
+        @apply border-secondary hover:bg-secondary;
+    }
+    &.has-primary-color,
+    &.has-secondary-color{
+        &:hover{
+            color: white !important;
+        }
+    }
+}
+
+/* HAS BACKGROUND-COLORS */
+.wp-block-button__link{
+    &.has-secondary-background-color{
+        @apply 
+        border-secondary
+        hover:text-secondary
+        ;
+        &:hover{
+            background-color: transparent !important;
+        }
+    }
+}
+

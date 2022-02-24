@@ -1,0 +1,30 @@
+#content{
+    padding-top: 74.39px
+}
+hr{
+    @apply my-6;
+}
+
+/* BREADCRUMB */
+.breadcrumbs{
+    a{
+        @apply transition-all hover:text-primary;
+    }
+    span.current-item{
+        @apply font-semibold;
+    }
+}
+
+/* MAP */
+.acf-map {
+    @apply w-full;
+    /* Fixes potential theme css conflict. */
+    img {
+        max-width: inherit !important;
+    }
+}
+
+.tw-hidden{
+    @apply hidden
+}
+
