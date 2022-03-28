@@ -67,3 +67,4 @@
 		<div id="content" class="site-content">
 			<?php do_action('tailpress_content_start'); ?>
 			<main>
+
