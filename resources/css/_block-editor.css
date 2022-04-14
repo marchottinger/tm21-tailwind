@@ -20,8 +20,8 @@
 }
 
 .wp-block-group{
-    border: 1px solid rgba(gray,0.1);
-    padding:10px;
+    border:  1px solid rgba( 240,240,240,  1) !important;
+  @apply p-2 m-2;
 }
 .block-library-spacer__resize-container{
     background: rgba(gray,0.5);
