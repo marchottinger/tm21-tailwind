@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: classes
+Template name: template base
 */
 ?>
 
