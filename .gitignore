@@ -3,3 +3,4 @@
 /.vscode
 /mix-manifest.json
 /css
+.DS_Store
