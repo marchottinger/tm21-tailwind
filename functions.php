@@ -8,18 +8,17 @@ require_once(get_template_directory().'/functions/reusable_blocks-menu.php');
 require_once(get_template_directory().'/functions/tm21-functions.php');
 // require_once(get_template_directory().'/functions/tm21-customizer.php');
 require_once(get_template_directory().'/functions/editor-styles.php'); 
-require get_stylesheet_directory() . '/includes/class-tailpress.php';
 
-add_action( 'enqueue_block_editor_assets', 'my_editor_assets', 100 );
+// add_action( 'enqueue_block_editor_assets', 'my_editor_assets', 100 );
 
-function my_editor_assets() {
-  $js_dir = get_stylesheet_directory_uri() . '/js';
+// function my_editor_assets() {
+//   $js_dir = get_stylesheet_directory_uri() . '/js';
 
-  wp_enqueue_script( 'my-editor', $js_dir . '/my-editor.js',
-    [ 'wp-blocks', 'wp-dom' ] , '', true );
-}
+//   wp_enqueue_script( 'my-editor', $js_dir . '/my-editor.js',
+//     [ 'wp-blocks', 'wp-dom' ] , '', true );
+// }
 
-
+remove_theme_support( 'core-block-patterns' );
 
 /**
  * Theme setup.

@@ -49,7 +49,7 @@
 
 <footer class="copyright bg-gray-50 py-4" role="contentinfo">
 	<div class="container mx-auto text-gray-500 text-xs">
-		&copy; Copyright <?php echo date_i18n('Y'); ?> - <?php echo get_bloginfo('name'); ?> – <?php _e('Réalisé par', 'tm21') ?> trivialmass
+		&copy; Copyright <?php echo date_i18n('Y'); ?> - <?php echo get_bloginfo('name'); ?> – <?php _e('Réalisé par', 'tm21') ?> <a href="https://trivialmass.ch">trivialmass</a>
 	</div>
 </footer>
 
