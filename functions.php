@@ -30,9 +30,7 @@ function tailpress_setup() {
 
 	register_nav_menus(
 		array(
-			'primary' => __( 'Primary Menu', 'tailpress' ),
-			'footer-navigation' => __( 'Footer navigation', 'tailpress' ),
-			'language-switcher' => __( 'Language switcher', 'tailpress' ),
+			'primary' => __( 'Primary Menu', 'tailpress' )
 		)
 	);
 

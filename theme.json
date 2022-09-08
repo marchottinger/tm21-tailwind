@@ -10,22 +10,27 @@
         {
           "name": "Primary",
           "slug": "primary",
-          "color": "#23342E"
+          "color": "#404bef"
         },
         {
           "name": "Secondary",
           "slug": "secondary",
-          "color": "#440002"
+          "color": "#e21d7e"
         },
         {
-          "name": "Dark",
-          "slug": "dark",
-          "color": "#1F2937"
+          "name": "Gray dark",
+          "slug": "gray-dark",
+          "color": "#1c1c1c"
         },
         {
-          "name": "Light",
-          "slug": "light",
-          "color": "#F9FAFB"
+          "name": "Gray medium",
+          "slug": "gray-medium",
+          "color": "#7e7e7e"
+        },
+        {
+          "name": "Gray light",
+          "slug": "gray-light",
+          "color": "#f4f4f4"
         }
       ]
     },

@@ -1,8 +1,3 @@
 footer.footer{
-    ul.menu{
-        li{
-            @apply py-0;
-            a{}
-        }
-    }
+
 }

@@ -25,6 +25,30 @@ hr{
 }
 
 .tw-hidden{
-    @apply hidden
+    @apply hidden;
 }
 
+/* Tabs / togglers */
+.tab {
+
+    input {
+        @apply absolute opacity-0;
+
+        &:checked {
+            + .tab-label {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+            ~ .tab-content {
+                @apply py-4 overflow-visible;
+                max-height: 1024px;
+            }
+        }            
+    }
+
+    &-content {
+        @apply px-4 max-h-0 transition-all duration-300 overflow-hidden;
+    }
+
+}

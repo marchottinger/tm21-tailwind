@@ -1,12 +1,12 @@
 {
-    "key": "group_613b405f07153",
-    "title": "BLOCK – search",
+    "key": "group_631a0cc04e531",
+    "title": "FOOTER - Option",
     "fields": [
         {
-            "key": "field_613b40677e1f0",
-            "label": "Recherche",
-            "name": "",
-            "type": "message",
+            "key": "field_631a0ccdce4b4",
+            "label": "Footer block",
+            "name": "footer_block",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,17 +15,22 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "post_type": [
+                "wp_block"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "options_page",
                 "operator": "==",
-                "value": "acf\/search-custom"
+                "value": "acf-options-footer"
             }
         ]
     ],
@@ -37,5 +42,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631273087
+    "show_in_rest": 0,
+    "modified": 1662651621
 }
