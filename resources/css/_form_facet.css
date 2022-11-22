@@ -1,0 +1,176 @@
+body{
+
+    /* ICON */
+    .facetwp-icon{
+        @apply flex justify-center items-center right-auto min-w-[42px];
+
+        &::before {display: none !important;}
+        &:after {
+            @apply flex items-center h-full text-black;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font: var(--fa-font-solid);
+            content: "\f002";
+        }
+    }
+    .facetwp-facet{
+        @apply w-full mb-0;
+
+
+        input, textarea, select,
+        .facetwp-input-wrap{
+            @apply w-full leading-4 max-h-[46px];
+        }
+
+        /* Checkboxes field */
+        &.facetwp-type-checkboxes{
+            .facetwp-checkbox{
+                span.facetwp-counter{
+                    @apply hidden;
+                }
+            }
+        }
+
+        /* Search */
+        &.facetwp-type-search{
+            span.facetwp-input-wrap{
+                i.facetwp-icon{
+                    @apply font-bold opacity-100;
+                }
+                input.facetwp-search{
+                    @apply pr-[0.75rem] pl-[42px];
+                }        
+            }
+        }
+
+        /* Dropdown */
+        &.facetwp-type-dropdown{
+        }
+
+        /* Date */
+        &.facetwp-facet-date{
+            @apply relative;
+
+            &::before{
+                @apply inline-flex justify-center items-center absolute w-[42px] h-full text-black opacity-50;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font: var(--fa-font-regular);
+                content: "\f133";
+            }
+            input.facetwp-date{
+                @apply pl-[42px];
+            }
+        }
+
+        /* Multi-select */
+        &.facetwp-type-fselect{
+            .fs-wrap.multiple{
+                @apply w-[240px];
+                .fs-label-wrap{
+                    @apply border-none;
+
+                    /* Select */
+                    .fs-label{
+                        @apply border-[3px] border-black bg-gray-50 text-black outline-none px-4 py-3 focus:ring-transparent cursor-pointer pr-9;
+                    }
+                    /* Arrow */
+                    .fs-arrow{
+                        @apply w-7 h-7 flex items-center justify-center border-none right-2;
+                        &::before{
+                            @apply inline-block text-lg;
+                            text-rendering: auto;
+                            -webkit-font-smoothing: antialiased;
+                            font: var(--fa-font-solid);
+                            content: "\f063";
+                        }
+                    }
+                }
+                /* Dropdown */
+                .fs-dropdown{
+                    @apply border-black border-[3px];
+                    /* Search input */
+                    .fs-search{
+                        @apply mb-4 bg-transparent pt-4 px-6 pb-0;
+                        input{
+                            @apply border-b-2 border-solid border-t-0 border-r-0 border-l-0 border-b-black/20 rounded-none text-sm;
+                        }
+                    }
+                    /* Checkbox list */
+                    .fs-options{
+                        @apply px-2;
+                        .fs-option{
+                            @apply mb-2 last-of-type:mb-0;
+                            /* Checkbox */
+                            span.fs-checkbox{
+                                @apply absolute;
+                                i{
+                                    @apply hidden;
+                                }
+                            }
+                            /* Label */
+                            .fs-option-label{
+                                @apply whitespace-pre-wrap text-sm;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Slider */
+        &.facetwp-type-slider {
+            @apply min-w-[150px];
+
+            .facetwp-slider-wrap {
+                @apply pt-3 pb-2;
+
+                .noUi-horizontal{
+                    @apply h-[7px];
+                }
+
+                .noUi-target{
+                    @apply border-none bg-gray-300 rounded-full;
+                }
+
+                .noUi-connects{
+                    @apply rounded-full;
+                }
+
+                .noUi-connect {
+                    @apply bg-primary;
+                }
+
+                .noUi-handle{
+                    @apply rounded-full bg-white border-primary;
+                }
+
+                .noUi-horizontal .noUi-handle{
+                    @apply -top-[7px]
+                }
+            }
+
+            .facetwp-slider-label {
+                @apply font-semibold text-sm;
+            }
+
+            .facetwp-slider-reset{
+                @apply hidden;
+            }
+        }
+
+        /* Reset */
+        &.facetwp-type-reset {
+            .facetwp-reset{
+                @apply hover:text-primary relative pb-2 transition-all duration-200;
+                &::after{
+                    @apply content-[''] bg-primary w-0 h-1 absolute bottom-0 right-0 transition-all duration-200;
+                }
+                &:hover::after{
+                    @apply right-auto left-0 w-full;
+                }    
+            }
+        }
+
+    }
+}

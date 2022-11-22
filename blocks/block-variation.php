@@ -1,16 +1,50 @@
 <?php  
 register_block_style(
-    'core/list',
+    'core/heading',
     array(
-        'name'         => 'list-arrow',
-        'label'        => __( 'List Arrow' ),
+        'name'         => 'no-margin',
+        'label'        => __( 'No margin' ),
     )
 );
 register_block_style(
-    'core/list',
+    'core/paragraph',
     array(
-        'name'         => 'list-check',
-        'label'        => __( 'List Check' ),
+        'name'         => 'no-margin',
+        'label'        => __( 'No margin' ),
     )
 );
-?>
+register_block_style(
+    'core/group',
+    array(
+        'name'         => 'full-height',
+        'label'        => __( 'Full height' ),
+    )
+);
+register_block_style(
+    'core/group',
+    array(
+        'name'         => 'mini-padding',
+        'label'        => __( 'Mini padding' ),
+    )
+);
+register_block_style(
+    'core/group',
+    array(
+        'name'         => 'no-padding',
+        'label'        => __( 'No padding' ),
+    )
+);
+register_block_style(
+    'core/columns',
+    array(
+        'name'         => 'no-margin',
+        'label'        => __( 'No margin' ),
+    )
+);
+register_block_style(
+    'core/columns',
+    array(
+        'name'         => 'gapless',
+        'label'        => __( 'Gapless' ),
+    )
+);

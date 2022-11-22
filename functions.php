@@ -9,14 +9,13 @@ require_once(get_template_directory().'/functions/tm21-functions.php');
 // require_once(get_template_directory().'/functions/tm21-customizer.php');
 require_once(get_template_directory().'/functions/editor-styles.php'); 
 
-// add_action( 'enqueue_block_editor_assets', 'my_editor_assets', 100 );
+add_action( 'enqueue_block_editor_assets', 'my_editor_assets', 100 );
+function my_editor_assets() {
+  $js_dir = get_stylesheet_directory_uri() . '/js';
 
-// function my_editor_assets() {
-//   $js_dir = get_stylesheet_directory_uri() . '/js';
-
-//   wp_enqueue_script( 'my-editor', $js_dir . '/my-editor.js',
-//     [ 'wp-blocks', 'wp-dom' ] , '', true );
-// }
+  wp_enqueue_script( 'my-editor', $js_dir . '/my-editor.js',
+    [ 'wp-blocks', 'wp-dom' ] , '', true );
+}
 
 remove_theme_support( 'core-block-patterns' );
 
@@ -45,6 +44,8 @@ function tailpress_setup() {
 		)
 	);
 
+	add_image_size( 'wide', 1920 );
+
     add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
 
@@ -54,7 +55,6 @@ function tailpress_setup() {
 	remove_theme_support( 'core-block-patterns' );
 
 	add_theme_support( 'editor-styles' );
-
 	add_editor_style();
 }
 

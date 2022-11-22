@@ -1,0 +1,54 @@
+body .gform_wrapper.gravity-theme, body{
+
+    /* CHECKBOX */
+    .gfield_checkbox{
+        .gchoice{
+            @apply mb-2 last-of-type:mb-0 relative;
+        }
+    }
+    
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        @apply absolute -left-[9999px];
+    }
+    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option span.fs-checkbox,
+    .facetwp-type-checkboxes .facetwp-checkbox,
+    [type="checkbox"]:not(:checked) + label:not(.tab-label),
+    [type="checkbox"]:checked + label:not(.tab-label) {
+        @apply relative pl-8 pt-[1px] cursor-pointer min-h-[30px] text-base;
+
+        /* Background */
+        &::before{
+            @apply content-[''] absolute left-0 top-0 w-[1.625rem] h-[1.625rem] border-[3px] border-black bg-white;
+        }
+        /* Check icon */
+        &::after{
+            @apply content-[''] absolute top-0 left-0 text-base transition-all bg-no-repeat bg-center w-[1.625rem] h-[1.625rem] bg-[length:1rem_auto];
+            background-image: url('../assets/images/check-solid-white.svg');
+        }
+    }
+    /* When is checked */
+    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option.selected span.fs-checkbox::before,
+    .facetwp-type-checkboxes .facetwp-checkbox.checked::before,
+    [type="checkbox"]:checked + label:not(.tab-label):before{
+        @apply bg-primary border-primary;
+    }
+
+    /* checked mark aspect changes */
+    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option span.fs-checkbox::after,
+    .facetwp-type-checkboxes .facetwp-checkbox::after,
+    [type="checkbox"]:not(:checked) + label:not(.tab-label):after {
+        @apply opacity-0 scale-0;
+    }
+    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option.selected span.fs-checkbox::after,
+    .facetwp-type-checkboxes .facetwp-checkbox.checked::after,
+    [type="checkbox"]:checked + label:not(.tab-label):after {
+        @apply opacity-100 scale-100;
+    }
+    .facetwp-type-checkboxes{
+        .facetwp-checkbox{
+            @apply bg-none;
+        }
+    }
+
+}

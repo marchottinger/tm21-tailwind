@@ -9,7 +9,12 @@ h3,
 h4,
 h5,
 h6 {
-	@apply mb-5 font-display;
+	@apply mb-[1em] font-display;
+
+	&.is-style-no-margin{
+		@apply mb-0;
+	}
+
 }
 
 h1 {
@@ -33,6 +38,20 @@ h6 {
 
 p {
 	@apply mb-4 leading-tight text-lg;
+	
+	/* Small font size */
+	&.has-small-font-size {
+		line-height: 1.4em;
+	}
+
+	/* No margin */
+	&.is-style-no-margin{
+		@apply mb-0;
+	}
+
+	a{
+		@apply text-primary;
+	}
 }
 
 b,

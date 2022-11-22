@@ -25,14 +25,38 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
-function my_acf_init() {
-    acf_update_setting('google_api_key', 'XXXXX');
-}
-add_action('acf/init', 'my_acf_init');
+// function my_acf_init() {
+//     acf_update_setting('google_api_key', 'XXXXX');
+// }
+// add_action('acf/init', 'my_acf_init');
 
 
+// FacetWP: Remove Facet Count onf fSelect
+add_filter( 'facetwp_facet_dropdown_show_counts', '__return_false' );
 
-
+/* Order facets by term order */
+add_filter( 'facetwp_facet_orderby', function( $orderby, $facet ) {
+	$ordered_facets = [
+		'tranches_age' => 'age',
+	  //   'facet_name' => 'tax_nam',
+	];
+	if (  $ordered_facets[$facet['name']] ) {		
+		$terms = get_terms( array(
+			'taxonomy' => $ordered_facets[$facet['name']],
+			'hide_empty' => false,
+			// 'orderby' => 'term_order', // Currently causing a bug
+			'order' => 'ASC'
+		));
+		$termlist = [];
+		foreach ($terms AS $term ) {
+			$termlist[] = $term->slug;
+		}
+		$imploded_termlist = implode( '", "', $termlist );
+		$orderby = 'FIELD(f.facet_value, "' . $imploded_termlist . '" )';
+	}
+	return $orderby;
+  }, 11, 2);
+  
 
 /**
  * Add group block inner container.
