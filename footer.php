@@ -1,7 +1,5 @@
 </main>
-<?php do_action('tailpress_content_end'); ?>
 </div>
-<?php do_action('tailpress_content_after'); ?>
 
 
 
@@ -10,8 +8,6 @@
 	$footer_block = get_post($footer_block_id)->post_content;
 ?>
 <footer class="footer" role="contentinfo">
-	<?php do_action('tailpress_footer'); ?>
-
 	<div class="container mx-auto">
 		<?php if( $footer_block ) : ?>
 			<?php echo $footer_block ?>

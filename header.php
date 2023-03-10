@@ -11,9 +11,7 @@
 
 <body <?php body_class('bg-white text-gray-900 antialiased'); ?>>
 
-	<?php do_action('tailpress_site_before'); ?>
 	<div id="page" class="flex flex-col min-h-screen ">
-		<?php do_action('tailpress_header'); ?>
 
 		<div class="fixed top-0 bottom-0 left-0 right-0 z-20 w-full h-full transition-all duration-500 ease-out bg-white opacity-0 pointer-events-none overlay"></div>
 
@@ -53,6 +51,4 @@
 		</header>
 
 		<div id="content" class="site-content">
-			<?php do_action('tailpress_content_start'); ?>
 			<main>
-
