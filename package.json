@@ -5,9 +5,9 @@
 	"author": "dc",
 	"repository": {
 		"type": "git",
-		"url": "https://bitbucket.org/trivialmass-base/tm21-tailpress"
+		"url": "https://github.com/trivialmass/tm21-tailwind"
 	},
-	"theme_uri": "https://bitbucket.org/trivialmass-base/tm21-tailpress",
+	"theme_uri": "https://github.com/trivialmass/tm21-tailwind",
 	"author_uri": "https://trivialmass.com",
 	"text_domain": "tm21-tailwind",
 	"license": "GPL-2.0",
