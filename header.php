@@ -17,14 +17,14 @@
 
 		<?php get_template_part('template-parts/offcanvas', 'menu') ?>
 
-		<header class="fixed z-30 w-full py-4 transition-all duration-300 topbar ">
-			<div class="container flex items-center justify-end m-auto ">
+		<header class="fixed z-30 w-full py-4 transition-all duration-300">
+			<div class="container flex items-center justify-end m-auto">
 				<a href="<?php echo home_url(); ?>" class="mr-auto">
-					<?php if (has_custom_logo()) : ?>
+					<?php if( has_custom_logo() ) : ?>
 						<div class="flex mr-2 align-middle">
 							<?php
-							$custom_logo_id = get_theme_mod('custom_logo');
-							echo wp_get_attachment_image($custom_logo_id, 'full', "", ["class" => "w-24"]);
+								$custom_logo_id = get_theme_mod('custom_logo');
+								echo wp_get_attachment_image($custom_logo_id, 'full', "", ["class" => "w-24"]);
 							?>
 						</div>
 					<?php else : ?>

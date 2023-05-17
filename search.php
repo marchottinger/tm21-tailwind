@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="container mx-auto">
+	<div class="container">
 
 		<h1 class="archive-title"><?php _e( 'Search Results for:', 'jointswp' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
 

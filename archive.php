@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="container mx-auto">
+<div class="container">
 
 	<?php if (have_posts()) : ?>
 		<div class="grid grid-cols-3 grid-rows-3 gap-6">
