@@ -9,14 +9,18 @@
 ?>
 <footer class="footer" role="contentinfo">
 	<div class="container">
-		<?php if( $footer_block ) : ?>
-			<?php echo $footer_block ?>
-		<?php endif; ?>
+		<?php if (get_field("footer_block", "option")) :
+			$post_id = get_field("footer_block", "option");
+			$header = get_post($post_id);
+			setup_postdata($header);
+			echo the_content();
+			wp_reset_postdata();
+		endif; ?>
 	</div>
 </footer>
 
 
-<footer class="py-4 copyright bg-gray-light" role="contentinfo">
+<footer class="copyright" role="contentinfo">
 	<div class="container text-xs">
 		&copy; Copyright <?php echo date_i18n('Y'); ?> - <?php echo get_bloginfo('name'); ?> – <?php _e('Réalisé par', 'tm21') ?> <a href="https://trivialmass.ch">trivialmass</a>
 	</div>

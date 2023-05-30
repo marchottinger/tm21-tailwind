@@ -36,7 +36,7 @@ module.exports = {
             'md': '768px',
             'lg': '1024px',
             'xl': tailpress.theme('settings.layout.contentSize', theme),
-            '2xl': tailpress.theme('settings.layout.wideSize', theme)
+            '2xl': tailpress.theme('settings.layout.contentSize', theme)
         },
         fontFamily: {
             'display': ['"SuisseIntl-Bold"', 'times', 'sans-serif'], 

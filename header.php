@@ -20,16 +20,7 @@
 		<header class="fixed z-30 w-full py-4 transition-all duration-300">
 			<div class="container flex items-center justify-end m-auto">
 				<a href="<?php echo home_url(); ?>" class="mr-auto">
-					<?php if( has_custom_logo() ) : ?>
-						<div class="flex mr-2 align-middle">
-							<?php
-								$custom_logo_id = get_theme_mod('custom_logo');
-								echo wp_get_attachment_image($custom_logo_id, 'full', "", ["class" => "w-24"]);
-							?>
-						</div>
-					<?php else : ?>
-						<?php get_template_part('template-parts/logo', null) ?>
-					<?php endif; ?>
+					<?php get_template_part('template-parts/logo', null) ?>
 				</a>
 
 				<?php wp_nav_menu(
