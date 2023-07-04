@@ -1,0 +1,9 @@
+body .gform_wrapper.gravity-theme{
+   .gfield.gfield--type-date {
+      &.gfield--input-type-datepicker {}
+
+      input{
+         @apply w-full;
+      }
+   }
+}

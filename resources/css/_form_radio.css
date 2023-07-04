@@ -1,5 +1,10 @@
 body .gform_wrapper.gravity-theme, body{
 
+    --radio_outer: 26px;
+    --radio_inner: 13px;
+    --radio_inner_placement: 6px;
+    --border_width: 2px;
+
     /* RADIO */
     .gfield_radio{
         .gchoice{
@@ -17,32 +22,43 @@ body .gform_wrapper.gravity-theme, body{
     .facetwp-type-radio .facetwp-radio,
     [type="radio"]:not(:checked) + label,
     [type="radio"]:checked + label {
-        @apply relative pt-1 pl-8 cursor-pointer min-h-[1.8rem] inline-flex text-base flex-wrap justify-center;
+        @apply relative pt-[1px] cursor-pointer inline-flex text-base flex-wrap justify-center mb-2;
+        padding-left: calc(var(--radio_outer) + 0.3rem);
+        min-height: var(--radio_outer);
+
         /* Badge background */
         &::before{
-            @apply content-[''] absolute left-0 top-0 w-6 h-6 border-[3px] border-black bg-white rounded-full;
+            @apply content-[''] absolute left-0 top-0 border-solid border-black bg-white rounded-full;
+            border-width: var(--border_width);
+            width: var(--radio_outer);
+            height: var(--radio_outer);
         }
+
         /* Badge within */
         &::after{
-            @apply content-[''] absolute left-[6px] top-[6px] w-3 h-3 rounded-full transition-all
-            duration-300 bg-primary;
+            @apply content-[''] absolute rounded-full transition-all
+            duration-300 bg-primary opacity-0 scale-0;
+            width: var(--radio_inner);
+            height: var(--radio_inner);
+            top: var(--radio_inner_placement);
+            left: var(--radio_inner_placement);
         }
-        span{
-            @apply w-full;
+
+    }
+
+    /* Checked */
+    .facetwp-type-radio .facetwp-radio.checked,
+    [type="radio"]:checked + label {
+
+        &::before{
+            @apply border-primary;
+        }
+
+        &::after{
+            @apply opacity-100 scale-100;
         }
     }
-    .facetwp-type-radio .facetwp-radio::after,
-    [type="radio"]:not(:checked) + label::after {
-        @apply opacity-0 scale-0;
-    }
-    .facetwp-type-radio .facetwp-radio.checked::after,
-    [type="radio"]:checked + label::after {
-        @apply opacity-100 scale-100;
-    }
-    .facetwp-type-radio .facetwp-radio.checked::before,
-    [type="radio"]:checked + label:before{
-        @apply border-primary;
-    }
+
     .facetwp-type-radio{
         @apply flex flex-col;
         .facetwp-radio{

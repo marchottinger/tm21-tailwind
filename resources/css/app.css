@@ -23,6 +23,7 @@
 @import "_buttons.css";
 
 @import "_form.css";
+    @import "_form_date.css";
     @import "_form_radio.css";
     @import "_form_checkboxes.css";
     @import "_form_facet.css";

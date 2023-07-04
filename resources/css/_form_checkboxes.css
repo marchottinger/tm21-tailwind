@@ -1,4 +1,7 @@
-body .gform_wrapper.gravity-theme, body{
+body, body .gform_wrapper.gravity-theme {
+
+    --checkbox_size: 26px;
+    --border_width: 2px;
 
     /* CHECKBOX */
     .gfield_checkbox{
@@ -19,32 +22,34 @@ body .gform_wrapper.gravity-theme, body{
 
         /* Background */
         &::before{
-            @apply content-[''] absolute left-0 top-0 w-[1.625rem] h-[1.625rem] border-[3px] border-black bg-white;
+            @apply content-[''] absolute left-0 top-0 border-solid border-black bg-white transition-all duration-300;
+            border-width: var(--border_width);
+            width: var(--checkbox_size);
+            height: var(--checkbox_size);
         }
+
         /* Check icon */
         &::after{
-            @apply content-[''] absolute top-0 left-0 text-base transition-all bg-no-repeat bg-center w-[1.625rem] h-[1.625rem] bg-[length:1rem_auto];
+            @apply content-[''] absolute top-0 left-0 text-base bg-no-repeat bg-center bg-[length:1rem_auto] ease-[cubic-bezier(.33,1.41,.62,1)] transition-all duration-300 opacity-0 scale-0;
+            width: var(--checkbox_size);
+            height: var(--checkbox_size);
             background-image: url('../assets/images/check-solid-white.svg');
         }
     }
     /* When is checked */
-    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option.selected span.fs-checkbox::before,
-    .facetwp-type-checkboxes .facetwp-checkbox.checked::before,
-    [type="checkbox"]:checked + label:not(.tab-label):before{
-        @apply bg-primary border-primary;
+    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option.selected span.fs-checkbox,
+    .facetwp-type-checkboxes .facetwp-checkbox.checked,
+    [type="checkbox"]:checked + label:not(.tab-label){
+
+        &:before{
+            @apply bg-primary border-primary;
+        }
+
+        &::after{
+            @apply opacity-100 scale-100;
+        }
     }
 
-    /* checked mark aspect changes */
-    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option span.fs-checkbox::after,
-    .facetwp-type-checkboxes .facetwp-checkbox::after,
-    [type="checkbox"]:not(:checked) + label:not(.tab-label):after {
-        @apply opacity-0 scale-0;
-    }
-    .facetwp-facet.facetwp-type-fselect .fs-wrap.multiple .fs-dropdown .fs-options .fs-option.selected span.fs-checkbox::after,
-    .facetwp-type-checkboxes .facetwp-checkbox.checked::after,
-    [type="checkbox"]:checked + label:not(.tab-label):after {
-        @apply opacity-100 scale-100;
-    }
     .facetwp-type-checkboxes{
         .facetwp-checkbox{
             @apply bg-none;
