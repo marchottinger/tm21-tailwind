@@ -48,3 +48,17 @@ register_block_style(
         'label'        => __( 'Gapless' ),
     )
 );
+register_block_style(
+    'core/button',
+    array(
+        'name'      => 'medium',
+        'label'     => __( 'Medium' ),
+    )
+);
+register_block_style(
+    'core/button',
+    array(
+        'name'      => 'small',
+        'label'     => __( 'Small' ),
+    )
+);

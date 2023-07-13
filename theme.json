@@ -13,9 +13,19 @@
           "color": "#404bef"
         },
         {
+          "name": "Primary-hover",
+          "slug": "primary-hover",
+          "color": "#6c75f7"
+        },
+        {
           "name": "Secondary",
           "slug": "secondary",
           "color": "#e21d7e"
+        },
+        {
+          "name": "Secondary-hover",
+          "slug": "secondary-hover",
+          "color": "#f44c9f"
         },
         {
           "name": "Gray dark",
