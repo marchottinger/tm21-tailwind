@@ -25,7 +25,7 @@ const tailwind = plugin(function ({addUtilities, addComponents, e, prefix, confi
     const alignmentUtilities = {
         
         ".aligncenter": {   
-            margin: `${margin[2] || '1.5rem'} auto + 40`,
+            margin: `${margin[2] || '1.5rem'} auto`,
             "@apply block": {}
         },
         [`@media (min-width: ${screens.sm || '640px'})`]: {
