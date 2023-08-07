@@ -22,7 +22,7 @@ body{
             @apply w-full leading-4 max-h-[46px];
         }
 
-        /* Checkboxes field */
+        /* Checkboxes */
         &.facetwp-type-checkboxes{
             .facetwp-checkbox{
                 span.facetwp-counter{
