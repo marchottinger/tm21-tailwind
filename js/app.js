@@ -17,6 +17,11 @@
         header.classList.remove("scrolled");
       }
     });
+    if (scrollpos >= header_height) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
     Array.from(dropdownMenuHasChildren).forEach((element) => {
       var dropdownArrow = document.createElement("div");
       dropdownArrow.className = "dropdown-arrow";
@@ -33,8 +38,7 @@
       burgerIcon.addEventListener("click", function() {
         offcanvasMenu.classList.add("open");
         overlayOffcanvas.classList.add("open");
-        body.classList.toggle("overflow-hidden");
-        offcanvasMenu.classList.add("overflow-y-scroll");
+        body.classList.add("overflow-hidden");
       });
     }
     document.addEventListener("keyup", function(event) {
@@ -42,6 +46,7 @@
         if (offcanvasMenu.classList.contains("open")) {
           offcanvasMenu.classList.remove("open");
           overlayOffcanvas.classList.remove("open");
+          body.classList.remove("overflow-hidden");
         }
       }
     });
@@ -50,7 +55,7 @@
         if (overlayOffcanvas.classList.contains("open") && offcanvasMenu.classList.contains("open")) {
           offcanvasMenu.classList.remove("open");
           overlayOffcanvas.classList.remove("open");
-          body.classList.toggle("overflow-hidden");
+          body.classList.remove("overflow-hidden");
         }
       });
     }

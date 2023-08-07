@@ -1,26 +1,3 @@
-// import 'alpinejs';
-
-// var submenuItems = "";
-
-// setTimeout(function() {
-
-//     submenuItems = document.querySelectorAll(".menu-item.menu-item-has-children");
-
-//     console.log(submenuItems);
-
-//     Array.from(submenuItems).forEach(element => {
-
-//         console.log("It works");
-
-//         element.addEventListener('click', () => {
-    
-//             // console.log("It works");
-
-//         });
-//     });
-
-// }, 10);
-
 // Navigation toggle
 window.addEventListener('load', function () {
 
@@ -38,14 +15,17 @@ window.addEventListener('load', function () {
 
     window.addEventListener('scroll', function() { 
     scrollpos = window.scrollY;
-
         if (scrollpos >= header_height) {
             header.classList.add("scrolled");
         }else {
             header.classList.remove("scrolled");
         }
-        // console.log(scrollpos);
     })
+    if (scrollpos >= header_height) {
+        header.classList.add("scrolled");
+    }else {
+        header.classList.remove("scrolled");
+    }
 
     // Trigger the search when press Enter – Offcanvas_search
     // if(buttonSubmitFacet){
@@ -85,8 +65,7 @@ window.addEventListener('load', function () {
         burgerIcon.addEventListener("click", function () {
             offcanvasMenu.classList.add("open");
             overlayOffcanvas.classList.add("open");
-            body.classList.toggle("overflow-hidden");
-            offcanvasMenu.classList.add("overflow-y-scroll");
+            body.classList.add("overflow-hidden");
         });
     }
 
@@ -98,6 +77,7 @@ window.addEventListener('load', function () {
             if (offcanvasMenu.classList.contains("open")){
                 offcanvasMenu.classList.remove("open");
                 overlayOffcanvas.classList.remove("open");
+                body.classList.remove("overflow-hidden");
             }
         }
     });
@@ -121,7 +101,7 @@ window.addEventListener('load', function () {
             if (overlayOffcanvas.classList.contains("open") && offcanvasMenu.classList.contains("open")){
                 offcanvasMenu.classList.remove("open");
                 overlayOffcanvas.classList.remove("open");
-                body.classList.toggle("overflow-hidden");
+                body.classList.remove("overflow-hidden");
             }
         });
     }
