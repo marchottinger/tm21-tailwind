@@ -20,7 +20,15 @@
 		<header class="fixed z-30 w-full py-4 transition-all duration-300">
 			<div class="container flex items-center justify-end m-auto">
 				<a href="<?php echo home_url(); ?>" class="mr-auto">
-					<?php get_template_part('template-parts/logo', null) ?>
+				<?php
+					if ( get_field('logo','option') ) {
+						$attachment_id = get_field('logo','option');
+						$size = "full"; // (thumbnail, medium, large, full or custom size)
+						echo wp_get_attachment_image( $attachment_id, $size );
+					}else{
+						get_template_part('template-parts/logo', null);
+					}
+					?>
 				</a>
 
 				<?php wp_nav_menu(

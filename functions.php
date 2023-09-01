@@ -3,7 +3,6 @@
 require_once(get_template_directory().'/blocks/init-blocks.php');
 require_once(get_template_directory().'/blocks/block-variation.php');
 //require_once(get_template_directory().'/parts/blocks/block-pattern.php');
-require_once(get_template_directory().'/functions/custom-post-type.php');
 require_once(get_template_directory().'/functions/reusable_blocks-menu.php');
 require_once(get_template_directory().'/functions/tm21-functions.php');
 // require_once(get_template_directory().'/functions/tm21-customizer.php');
