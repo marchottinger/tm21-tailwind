@@ -65,26 +65,12 @@ add_action( 'after_setup_theme', 'tm21_setup' );
 function tm21_enqueue_scripts() {
 	$theme = wp_get_theme();
 
-	wp_enqueue_style( 'tm21', tm21_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tm21', tm21_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'tm21', get_stylesheet_directory_uri().'/css/app.css', array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tm21', get_stylesheet_directory_uri().'/js/app.js' , array(), $theme->get( 'Version' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'tm21_enqueue_scripts' );
 
-/**
- * Get asset path.
- *
- * @param string  $path Path to asset.
- *
- * @return string
- */
-function tm21_asset( $path ) {
-	if ( wp_get_environment_type() === 'production' ) {
-		return get_stylesheet_directory_uri() . '/' . $path;
-	}
-
-	return add_query_arg( 'time', time(),  get_stylesheet_directory_uri() . '/' . $path );
-}
 
 
 /**
