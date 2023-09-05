@@ -11,7 +11,7 @@
 
 <body <?php body_class('bg-white text-gray-900 antialiased'); ?>>
 
-	<div id="page" class="flex flex-col min-h-screen ">
+	<div id="page" class="">
 
 		<div class="fixed top-0 bottom-0 left-0 right-0 z-20 w-full h-full transition-all duration-500 ease-out bg-white opacity-0 pointer-events-none overlay"></div>
 
@@ -24,7 +24,7 @@
 					if ( get_field('logo','option') ) {
 						$attachment_id = get_field('logo','option');
 						$size = "full"; // (thumbnail, medium, large, full or custom size)
-						echo wp_get_attachment_image( $attachment_id, $size );
+						echo wp_get_attachment_image( $attachment_id, $size, "" , array( "class" => "w-32" ) );
 					}else{
 						get_template_part('template-parts/logo', null);
 					}
