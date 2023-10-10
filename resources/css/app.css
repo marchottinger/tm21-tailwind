@@ -16,6 +16,7 @@
     @import "_block_group.css";
     @import "_block_embed.css";
     @import "_block_gallery.css";
+    @import "_block_slider.css";
 
 @import "_fonts.css";
 @import "_header.css";
