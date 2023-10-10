@@ -35,5 +35,40 @@ function tm21_register_blocks(){
         ));
 
 
+        acf_register_block_type(array(
+            'name'              => 'slider-wrapper',
+            'title'             => __('Slider wrapper'),
+            'description'       => __('Wrapper of slider. Contains slides'),
+            'render_template'   => 'blocks/slider-wrapper.php',
+			'category'          => 'formatting',
+			'icon' 				=> 'format-gallery',
+            'enqueue_assets' => function(){
+                wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '', false );
+                wp_enqueue_style( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1', 'all' );
+            },
+            'supports'		    => [
+                'align'             => false,
+                'anchor'            => true,
+                'customClassName'   => true,
+                'jsx'               => true,
+            ]
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'slider-slide',
+            'title'             => __('Slider slide'),
+            'description'       => __('Single slide of slider'),
+            'render_template'   => 'blocks/slider-slide.php',
+			'category'          => 'formatting',
+			'icon' 				=> 'format-image',
+            'supports'		    => [
+                'align'             => false,
+                'anchor'            => true,
+                'customClassName'   => true,
+                'jsx'               => true,
+            ]
+        ));
+
+
     }
 }
