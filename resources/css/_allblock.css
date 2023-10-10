@@ -1,8 +1,5 @@
 .alignfull {
-	margin: calc(50% - 50vw);
-    width: 100vw;
-	margin-top: 0;
-	margin-bottom: 0;
+	@apply mx-[calc(calc(50%_-_50vw))] w-screen;
 }
 
 
@@ -28,15 +25,3 @@
         }
     }
 }
-
-
-/* SEARCH BLOC */
-.block-search-custom {
-	@apply w-full;
-	.wp-block-button,
-	.wp-block-button__link {
-		@apply w-full mb-0;
-	}
-}
-
-/* FROM HERE CUSTOM*/

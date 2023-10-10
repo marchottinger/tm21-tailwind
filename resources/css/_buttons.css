@@ -10,6 +10,7 @@ body{
     .gform_wrapper.gravity-theme .gform_footer input, 
     .gform_wrapper.gravity-theme .gform_page_footer button, 
     .gform_wrapper.gravity-theme .gform_page_footer input,
+    .facetwp-facet.facetwp-type-reset button.facetwp-reset,
     .wp-block-button__link{
         @apply rounded-[3px] py-3 px-8 bg-primary text-white text-base font-medium tracking-wide transition-all duration-300 mb-4;
 
@@ -68,6 +69,7 @@ body{
 
     /* CUSTOM STYLES */
         /* Medium */
+        .facetwp-facet.facetwp-type-reset button.facetwp-reset,
         .wp-block-button.is-style-medium>.wp-block-button__link{
             @apply py-2 px-6 text-sm;
         }

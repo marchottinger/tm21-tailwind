@@ -22,7 +22,7 @@ body .gform_wrapper.gravity-theme, body{
     .facetwp-type-radio .facetwp-radio,
     [type="radio"]:not(:checked) + label,
     [type="radio"]:checked + label {
-        @apply relative pt-[1px] cursor-pointer inline-flex text-base flex-wrap justify-center mb-2;
+        @apply relative pt-[1px] cursor-pointer inline-flex text-base flex-wrap mb-2;
         padding-left: calc(var(--radio_outer) + 0.3rem);
         min-height: var(--radio_outer);
 
