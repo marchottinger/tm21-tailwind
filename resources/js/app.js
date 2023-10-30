@@ -2,7 +2,9 @@
 window.addEventListener('load', function () {
 
     // VARS LIST
-    const burgerIcon = document.querySelector("header .burger-menu");
+    const burgerIcon = document.querySelector(".burger-menu");
+    const burgerIconClose = document.querySelector(".burger-menu-close");
+    //const burgerIconMobile = document.querySelector(".burger-menu-mobile");
     const overlayOffcanvas = document.querySelector(".overlay");
     const dropdownMenuHasChildren = document.querySelectorAll("li.menu-item.menu-item-has-children");
     const offcanvasMenu = document.getElementById("offcanvas-menu");
@@ -60,12 +62,25 @@ window.addEventListener('load', function () {
 
 
 
-    // Open Search offcanvas
-    if(burgerIcon){
+    // burger icon stuff
+    if (burgerIcon) {
         burgerIcon.addEventListener("click", function () {
-            offcanvasMenu.classList.add("open");
-            overlayOffcanvas.classList.add("open");
-            body.classList.add("overflow-hidden");
+            burgerIcon.classList.toggle("close-mode");
+            burgerIconClose.classList.toggle("close-mode");
+            offcanvasMenu.classList.toggle("open");
+            overlayOffcanvas.classList.toggle("open");
+            body.classList.toggle("overflow-hidden");
+            offcanvasMenu.classList.toggle("overflow-y-scroll");
+        });
+    }
+    if (burgerIconClose) {
+        burgerIconClose.addEventListener("click", function () {
+            burgerIcon.classList.toggle("close-mode");
+            burgerIconClose.classList.toggle("close-mode");
+            offcanvasMenu.classList.toggle("open");
+            overlayOffcanvas.classList.toggle("open");
+            body.classList.toggle("overflow-hidden");
+            offcanvasMenu.classList.toggle("overflow-y-scroll");
         });
     }
 

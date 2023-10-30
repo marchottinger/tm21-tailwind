@@ -1,18 +1,15 @@
 .offcanvas{
     &#offcanvas-menu{
-        @apply pt-8;
         &.open{
             @apply pointer-events-auto opacity-100 translate-x-0;
         }
     }
 }
-
 .overlay{
     &.open{
         @apply opacity-90 pointer-events-auto;
     }
 }
-
 /* ACCORDION MENU */
 ul.menu.accordion {
     @apply flex flex-col items-start ml-8;

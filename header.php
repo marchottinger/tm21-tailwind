@@ -20,12 +20,12 @@
 		<header class="fixed z-30 w-full py-4 transition-all duration-300">
 			<div class="container flex items-center justify-end m-auto">
 				<a href="<?php echo home_url(); ?>" class="mr-auto">
-				<?php
-					if ( get_field('logo','option') ) {
-						$attachment_id = get_field('logo','option');
+					<?php
+					if (get_field('logo', 'option')) {
+						$attachment_id = get_field('logo', 'option');
 						$size = "full"; // (thumbnail, medium, large, full or custom size)
-						echo wp_get_attachment_image( $attachment_id, $size, "" , array( "class" => "w-32" ) );
-					}else{
+						echo wp_get_attachment_image($attachment_id, $size, "", array("class" => "w-32"));
+					} else {
 						get_template_part('template-parts/logo', null);
 					}
 					?>
@@ -42,8 +42,10 @@
 					)
 				); ?>
 
-				<div class="flex items-center justify-center ml-6 text-2xl cursor-pointer burger-menu lg:hidden group text-primary w-11 h-11">
-					<i class="transition-all far fa-bars group-hover:scale-110"></i>
+				<div class="burger-menu  lg:hidden">
+					<span class="bg-primary"></span>
+					<span class="bg-primary"></span>
+					<span class="bg-primary"></span>
 				</div>
 
 			</div>
