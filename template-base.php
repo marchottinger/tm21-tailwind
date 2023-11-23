@@ -10,7 +10,6 @@ Template name: Base
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
 
-
 			<?php
 				$args = array(
 					'post_type' 		=> array( 'post' ),

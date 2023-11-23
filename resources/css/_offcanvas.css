@@ -32,7 +32,7 @@ ul.menu.accordion {
             @apply absolute right-0 cursor-pointer origin-center transition-all duration-300;
             &::after{
                 @apply p-3 inline-block;
-                font-family: "Font Awesome 5 Pro"; font-weight: 900; content: "\f078";
+                font: var(--fa-font-solid); font-weight: 900; content: "\f078";
             }
         }
 

@@ -68,7 +68,7 @@ ul.menu.dropdown {
             font-variant: normal;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
-            font-family: "Font Awesome 5 Pro"; font-weight: 400; content: "\f078";
+            font: var(--fa-font-solid); font-weight: 400; content: "\f078";
         }
         &:hover{
             ul.sub-menu{
