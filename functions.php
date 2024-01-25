@@ -60,7 +60,7 @@ function tm21_enqueue_scripts() {
 	$theme = wp_get_theme();
 
 	wp_enqueue_style( 'tm21', get_stylesheet_directory_uri().'/css/app.css', array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tm21', get_stylesheet_directory_uri().'/js/app.js' , array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tm21', get_stylesheet_directory_uri().'/js/app.js' , array('jquery'), $theme->get( 'Version' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'tm21_enqueue_scripts' );

@@ -16,6 +16,7 @@
     @import "_block_group.css";
     @import "_block_embed.css";
     @import "_block_gallery.css";
+        @import "_block_gallery_lightbox.css";
     @import "_block_slider.css";
 
 @import "_fonts.css";
@@ -29,3 +30,14 @@
     @import "_form_checkboxes.css";
     @import "_form_select.css";
     @import "_form_facet.css";
+
+/* @layer utilities {
+    @font-face {
+        font-family: 'SuisseIntl-Bold';
+        src: url('../assets/fonts/SuisseIntl-Bold-WebM.woff2') format('woff2'),
+            url('../assets/fonts/SuisseIntl-Bold-WebM.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }    
+} */
