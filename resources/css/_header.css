@@ -1,37 +1,18 @@
-svg#logo{
-    path, rect, polygon{
-        fill: var(--wp--preset--color--primary);
-    }
-}
-body.home{
-
-    header{
+header{
+    &.header{
         svg#logo{
-            @apply transition-all duration-300;
             path, rect, polygon{
-                fill: white;
+                fill: var(--wp--preset--color--primary);
             }
         }
         &.scrolled{
             @apply bg-white shadow-lg;
-            > .container{
-                @apply text-gray-600;
-            }
-            svg#logo{
-                path, rect, polygon{
-                    fill: var(--wp--preset--color--primary);
-                }
-            }
         }   
     }
-
 }
 
-header.topbar{
-    &.scrolled{
-        @apply bg-white shadow-lg
-    }
-}
+body.home{}
+
 
 
 /* MENU */

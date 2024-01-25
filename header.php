@@ -17,14 +17,13 @@
 
 		<?php get_template_part('template-parts/offcanvas', 'menu') ?>
 
-		<header class="fixed z-30 w-full py-4 transition-all duration-300">
+		<header class="fixed z-30 w-full py-4 transition-all duration-300 header">
 			<div class="container flex items-center justify-end m-auto">
 				<a href="<?php echo home_url(); ?>" class="mr-auto">
 					<?php
 					if (get_field('logo', 'option')) {
 						$attachment_id = get_field('logo', 'option');
-						$size = "full"; // (thumbnail, medium, large, full or custom size)
-						echo wp_get_attachment_image($attachment_id, $size, "", array("class" => "w-32"));
+						echo wp_get_attachment_image($attachment_id, 'large', "", array("class" => "w-32"));
 					} else {
 						get_template_part('template-parts/logo', null);
 					}
@@ -42,7 +41,7 @@
 					)
 				); ?>
 
-				<div class="burger-menu  lg:hidden">
+				<div class="burger-menu lg:hidden">
 					<span class="bg-primary"></span>
 					<span class="bg-primary"></span>
 					<span class="bg-primary"></span>
